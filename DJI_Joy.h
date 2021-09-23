@@ -24,6 +24,7 @@ typedef struct
 	int16_t ch3;//channel 3
 	int8_t left;//left button
 	int8_t right;//right button
+	int16_t wheel;//left top wheel
 }Remote_t;
 
 extern Remote_t Raw_Data;

@@ -23,6 +23,7 @@ void joystickDecode(){//写在回调函数里面 解码收到的信息
 
     Raw_Data.left = ((JoyStickReceiveData[5] >> 4) & 0x000C) >> 2;
     Raw_Data.right = ((JoyStickReceiveData[5] >> 4) & 0x0003);
+    Raw_Data.wheel = ((int16_t)JoyStickReceiveData[16]) | ((int16_t)JoyStickReceiveData[17] << 8);
 
 
     switch(Raw_Data.right)
